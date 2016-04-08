@@ -3,4 +3,4 @@ import startServer from './src/server'
 
 export const store = makeStore();
 
-startServer();
+startServer(store);
