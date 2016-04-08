@@ -1,16 +1,30 @@
 {
-  "name": "voting-server",
-  "version": "1.0.0",
-  "description": "",
+  "name": "redux-voting-server",
+  "version": "0.0.0",
+  "description": "A Redux server that allows users to vote for things",
+  "author": "Graham Swan <thinkswan@gmail.com> (https://www.grahamswan.com/)",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test -- --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinkswan/redux-voting-server.git"
+  },
+   "bugs": {
+    "url": "https://github.com/thinkswan/redux-voting-server/issues"
+  },
+  "keywords": [
+    "node",
+    "socket-io",
+    "babel",
+    "immutable",
+    "chai",
+    "mocha",
+    "redux"
+  ],
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.4",
@@ -28,5 +42,7 @@
     "immutable": "^3.7.6",
     "redux": "^3.3.1",
     "socket.io": "^1.4.5"
-  }
+  },
+  "private": true,
+  "license": "MIT"
 }
