@@ -1,6 +1,6 @@
 import {List, Map} from 'immutable';
 
-function getWinners(vote) {
+function getWinners (vote) {
   if (!vote) return [];
 
   const [a, b] = vote.get('pair');
@@ -12,7 +12,7 @@ function getWinners(vote) {
   else                      return [a, b]
 }
 
-export function setEntries(state, entries) {
+export function setEntries (state, entries) {
   return state.set('entries', List(entries));
 }
 
@@ -32,7 +32,7 @@ export function next(state) {
   }
 }
 
-export function vote(state, entry) {
+export function vote (state, entry) {
   return state.updateIn(
     ['vote', 'tally', entry],
     0,
