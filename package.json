@@ -5,7 +5,9 @@
   "author": "Graham Swan <thinkswan@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "server": "babel-node index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test -- --watch"
   },
@@ -37,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "concurrently": "^4.1.1",
     "immutable": "^3.7.6",
     "redux": "^3.3.1",
     "socket.io": "^1.4.5"
