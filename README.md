@@ -10,7 +10,7 @@ http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html.
 ```
 npm install
 npm test
-npm start
+npm run dev
 ```
 
 This will start a server at http://localhost:8080/.
