@@ -9,6 +9,7 @@ http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html.
 
 ```
 npm install
+cd client/ && npm install cd ../ # Run `npm install` in `client/` to install client dependencies
 npm test
 npm run dev
 ```
