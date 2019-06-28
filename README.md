@@ -1,6 +1,6 @@
-# redux-voting-server
+# redux-voting-app
 
-A Redux server that allows users to vote for things.
+A React app that allows users to vote for things and uses Redux.
 
 Based on the tutorial found at
 http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html.
@@ -8,25 +8,31 @@ http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html.
 ## How to use
 
 ```
-git clone git@github.com:thinkswan/redux-voting-server.git
 npm install
 npm test
 npm start
 ```
 
-This will start a Socket.io server on port 8090.
+This will start a server at http://localhost:8080/.
 
-You must also run the
-[redux-voting-client](https://github.com/thinkswan/redux-voting-client) project
-alongside this server.
+To view the results of a vote, visit http://localhost:8080/#/results.
 
 ## How it works
+
+The app is implemented using React components with state being managed by a
+Redux store. Action creators are used to connect each component to the store
+and reducers are used to transform the state when the user interacts with the
+app and when the server emits updated data.
+
+A custom piece of middleware called `RemoteActionMiddleware` emits actions to
+the server when necessary.
+
+The client and server talk to each other using web sockets implemented by
+Socket.io.
 
 The server is implemented using Socket.io so multiple clients can easily
 participate in each vote. The server emits a `state` event whenever data changes
 and listens to `action` events to store votes from the clients.
-
-State is managed with a Redux store.
 
 ## License
 
