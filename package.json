@@ -1,8 +1,8 @@
 {
-  "name": "redux-voting-server",
+  "name": "redux-voting-app",
   "version": "0.0.0",
-  "description": "A Redux server that allows users to vote for things",
-  "author": "Graham Swan <thinkswan@gmail.com> (https://www.grahamswan.com/)",
+  "description": "A React app that allows users to vote for things and uses Redux.",
+  "author": "Graham Swan <thinkswan@gmail.com>",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
@@ -11,11 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thinkswan/redux-voting-server.git"
+    "url": "https://github.com/thinkswan/redux-voting-app.git"
   },
-   "bugs": {
-    "url": "https://github.com/thinkswan/redux-voting-server/issues"
-  },
+  "bugs": {},
   "keywords": [
     "node",
     "socket-io",
